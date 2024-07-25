@@ -57,8 +57,8 @@ namespace SeroJob.ObjectPooling
         public void PushItem(GameObject item, bool setParent = true)
         {
             _poolSize++;
-            _pool.Add(item.GetComponent<T>());
             item.SetActive(false);
+            _pool.Add(item.GetComponent<T>());
             if(setParent) item.transform.SetParent(_poolHolder, false);
         }
 
