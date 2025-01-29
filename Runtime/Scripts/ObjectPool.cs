@@ -14,6 +14,8 @@ namespace SeroJob.ObjectPooling
 
         private int _poolSize;
 
+        public int CurrentPoolSize => _poolSize;
+
         public ObjectPool(GameObject itemPref, Transform poolHolder, int startSize, bool pushCachedItems = true)
         {
             _poolItemPref = itemPref;
