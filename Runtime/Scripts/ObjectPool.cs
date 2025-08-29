@@ -34,8 +34,8 @@ namespace SeroJob.ObjectPooling
 
             for(int i = 0; i < step; i++)
             {
-                var item = _poolHolder.GetChild(0);
-                PushItem(item.gameObject, true);
+                var item = _poolHolder.GetChild(i);
+                PushItem(item.gameObject, false);
             }
         }
 
